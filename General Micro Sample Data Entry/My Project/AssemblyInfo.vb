@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("General Micro Sample Data Entry")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Hewlett-Packard Company")> 
-<Assembly: AssemblyProduct("General Micro Sample Data Entry")> 
-<Assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2015")> 
+<Assembly: AssemblyTitle("General Micro Sample Data Entry")>
+<Assembly: AssemblyDescription("This program will assist General Microbiology in recording sample information and exporting results to LabWorks.")>
+<Assembly: AssemblyCompany("The National Food Lab")>
+<Assembly: AssemblyProduct("General Micro Sample Data Entry")>
+<Assembly: AssemblyCopyright("Copyright © The National Food Lab 2015")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

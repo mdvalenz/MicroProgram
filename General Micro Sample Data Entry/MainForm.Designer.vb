@@ -40,8 +40,8 @@ Partial Class MainForm
         Me.confirmationsSDEGroupBox = New System.Windows.Forms.GroupBox()
         Me.printDailyPullListsSDEButton = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
         Me.mainTabControl = New System.Windows.Forms.TabControl()
         Me.techniciansSDETabPage = New System.Windows.Forms.TabPage()
         Me.notCompletedItemsSDEButton = New System.Windows.Forms.Button()
@@ -50,6 +50,12 @@ Partial Class MainForm
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.adminsTabPage = New System.Windows.Forms.TabPage()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EMailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewAuditTrailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.generalSamplesSDEGroupBox.SuspendLayout()
         Me.MPNOptionsSDEGroupBox.SuspendLayout()
         Me.confirmationsSDEGroupBox.SuspendLayout()
@@ -58,6 +64,7 @@ Partial Class MainForm
         Me.techniciansSDETabPage.SuspendLayout()
         Me.firstReviewersTabPage.SuspendLayout()
         Me.adminsTabPage.SuspendLayout()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'importSamplesSDEButton
@@ -73,9 +80,9 @@ Partial Class MainForm
         'authorizedPersonnelSDEButton
         '
         Me.authorizedPersonnelSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorizedPersonnelSDEButton.Location = New System.Drawing.Point(271, 64)
+        Me.authorizedPersonnelSDEButton.Location = New System.Drawing.Point(263, 17)
         Me.authorizedPersonnelSDEButton.Name = "authorizedPersonnelSDEButton"
-        Me.authorizedPersonnelSDEButton.Size = New System.Drawing.Size(276, 43)
+        Me.authorizedPersonnelSDEButton.Size = New System.Drawing.Size(284, 43)
         Me.authorizedPersonnelSDEButton.TabIndex = 2
         Me.authorizedPersonnelSDEButton.Text = "Edit Authorized Personnel"
         Me.authorizedPersonnelSDEButton.UseVisualStyleBackColor = True
@@ -83,9 +90,9 @@ Partial Class MainForm
         'editPrefixListSDEButton
         '
         Me.editPrefixListSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.editPrefixListSDEButton.Location = New System.Drawing.Point(271, 15)
+        Me.editPrefixListSDEButton.Location = New System.Drawing.Point(263, 66)
         Me.editPrefixListSDEButton.Name = "editPrefixListSDEButton"
-        Me.editPrefixListSDEButton.Size = New System.Drawing.Size(276, 43)
+        Me.editPrefixListSDEButton.Size = New System.Drawing.Size(284, 43)
         Me.editPrefixListSDEButton.TabIndex = 1
         Me.editPrefixListSDEButton.Text = "Edit Prefix List"
         Me.editPrefixListSDEButton.UseVisualStyleBackColor = True
@@ -167,7 +174,7 @@ Partial Class MainForm
         Me.ecoliColiformsSDEButton.Name = "ecoliColiformsSDEButton"
         Me.ecoliColiformsSDEButton.Size = New System.Drawing.Size(284, 43)
         Me.ecoliColiformsSDEButton.TabIndex = 8
-        Me.ecoliColiformsSDEButton.Text = "E-coli Coliforms"
+        Me.ecoliColiformsSDEButton.Text = "E. coli"
         Me.ecoliColiformsSDEButton.UseVisualStyleBackColor = True
         '
         'fecalColiformsSDEButton
@@ -245,22 +252,13 @@ Partial Class MainForm
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Window
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox1, Me.ToolStripTextBox2})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 521)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(563, 24)
         Me.MenuStrip1.TabIndex = 26
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ToolStripTextBox2
-        '
-        Me.ToolStripTextBox2.BackColor = System.Drawing.SystemColors.Window
-        Me.ToolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ToolStripTextBox2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
-        Me.ToolStripTextBox2.ReadOnly = True
-        Me.ToolStripTextBox2.Size = New System.Drawing.Size(400, 20)
-        Me.ToolStripTextBox2.Text = "1st Reviewer (MH, QA, PT, AMHOH)"
         '
         'ToolStripTextBox1
         '
@@ -273,6 +271,16 @@ Partial Class MainForm
         Me.ToolStripTextBox1.Text = "Authorization level:"
         Me.ToolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
+        'ToolStripTextBox2
+        '
+        Me.ToolStripTextBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.ToolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ToolStripTextBox2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
+        Me.ToolStripTextBox2.ReadOnly = True
+        Me.ToolStripTextBox2.Size = New System.Drawing.Size(400, 20)
+        Me.ToolStripTextBox2.Text = "1st Reviewer (MH, QA, PT, AMHOH)"
+        '
         'mainTabControl
         '
         Me.mainTabControl.Controls.Add(Me.techniciansSDETabPage)
@@ -284,7 +292,7 @@ Partial Class MainForm
         Me.mainTabControl.Name = "mainTabControl"
         Me.mainTabControl.Padding = New System.Drawing.Point(20, 10)
         Me.mainTabControl.SelectedIndex = 0
-        Me.mainTabControl.Size = New System.Drawing.Size(563, 486)
+        Me.mainTabControl.Size = New System.Drawing.Size(563, 497)
         Me.mainTabControl.TabIndex = 27
         '
         'techniciansSDETabPage
@@ -297,7 +305,7 @@ Partial Class MainForm
         Me.techniciansSDETabPage.Location = New System.Drawing.Point(4, 52)
         Me.techniciansSDETabPage.Name = "techniciansSDETabPage"
         Me.techniciansSDETabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.techniciansSDETabPage.Size = New System.Drawing.Size(555, 430)
+        Me.techniciansSDETabPage.Size = New System.Drawing.Size(555, 441)
         Me.techniciansSDETabPage.TabIndex = 0
         Me.techniciansSDETabPage.Text = "Technicians"
         Me.techniciansSDETabPage.UseVisualStyleBackColor = True
@@ -321,7 +329,7 @@ Partial Class MainForm
         Me.firstReviewersTabPage.Location = New System.Drawing.Point(4, 52)
         Me.firstReviewersTabPage.Name = "firstReviewersTabPage"
         Me.firstReviewersTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.firstReviewersTabPage.Size = New System.Drawing.Size(555, 430)
+        Me.firstReviewersTabPage.Size = New System.Drawing.Size(555, 441)
         Me.firstReviewersTabPage.TabIndex = 1
         Me.firstReviewersTabPage.Text = "1st Reviewers"
         Me.firstReviewersTabPage.UseVisualStyleBackColor = True
@@ -359,23 +367,70 @@ Partial Class MainForm
         '
         'adminsTabPage
         '
+        Me.adminsTabPage.Controls.Add(Me.Button2)
         Me.adminsTabPage.Controls.Add(Me.editPrefixListSDEButton)
         Me.adminsTabPage.Controls.Add(Me.authorizedPersonnelSDEButton)
         Me.adminsTabPage.Location = New System.Drawing.Point(4, 52)
         Me.adminsTabPage.Name = "adminsTabPage"
-        Me.adminsTabPage.Size = New System.Drawing.Size(555, 430)
+        Me.adminsTabPage.Size = New System.Drawing.Size(555, 441)
         Me.adminsTabPage.TabIndex = 2
         Me.adminsTabPage.Text = "Administrators"
         Me.adminsTabPage.UseVisualStyleBackColor = True
+        '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(563, 24)
+        Me.MenuStrip2.TabIndex = 28
+        Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseToolStripMenuItem, Me.EMailToolStripMenuItem, Me.ViewAuditTrailToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.SettingsToolStripMenuItem.Text = "Options"
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(263, 115)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(284, 43)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Edit Pathogen Analysis List"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'DatabaseToolStripMenuItem
+        '
+        Me.DatabaseToolStripMenuItem.Name = "DatabaseToolStripMenuItem"
+        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DatabaseToolStripMenuItem.Text = "Select Database"
+        '
+        'EMailToolStripMenuItem
+        '
+        Me.EMailToolStripMenuItem.Name = "EMailToolStripMenuItem"
+        Me.EMailToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.EMailToolStripMenuItem.Text = "Configure E-Mail"
+        '
+        'ViewAuditTrailToolStripMenuItem
+        '
+        Me.ViewAuditTrailToolStripMenuItem.Name = "ViewAuditTrailToolStripMenuItem"
+        Me.ViewAuditTrailToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ViewAuditTrailToolStripMenuItem.Text = "View Audit Trail"
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(563, 510)
+        Me.ClientSize = New System.Drawing.Size(563, 545)
         Me.Controls.Add(Me.mainTabControl)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainForm"
@@ -390,6 +445,8 @@ Partial Class MainForm
         Me.techniciansSDETabPage.ResumeLayout(False)
         Me.firstReviewersTabPage.ResumeLayout(False)
         Me.adminsTabPage.ResumeLayout(False)
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -422,5 +479,10 @@ Partial Class MainForm
     Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents notCompletedItemsSDEButton As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-
+    Friend WithEvents Button2 As Button
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DatabaseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EMailToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewAuditTrailToolStripMenuItem As ToolStripMenuItem
 End Class
