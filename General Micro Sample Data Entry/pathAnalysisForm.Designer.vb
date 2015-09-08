@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class prefixListForm
+Partial Class pathAnalysisForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,17 +25,17 @@ Partial Class prefixListForm
         Me.saveAndCloseButton = New System.Windows.Forms.Button()
         Me.prefixListEPLDataGridView = New System.Windows.Forms.DataGridView()
         Me.prefixList = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.prefixListEPLLabel = New System.Windows.Forms.Label()
+        Me.pathAnalysisPALabel = New System.Windows.Forms.Label()
         CType(Me.prefixListEPLDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'saveAndCloseButton
         '
         Me.saveAndCloseButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveAndCloseButton.Location = New System.Drawing.Point(81, 398)
+        Me.saveAndCloseButton.Location = New System.Drawing.Point(112, 397)
         Me.saveAndCloseButton.Name = "saveAndCloseButton"
         Me.saveAndCloseButton.Size = New System.Drawing.Size(201, 42)
-        Me.saveAndCloseButton.TabIndex = 8
+        Me.saveAndCloseButton.TabIndex = 11
         Me.saveAndCloseButton.TabStop = False
         Me.saveAndCloseButton.Text = "Save and Close"
         Me.saveAndCloseButton.UseVisualStyleBackColor = True
@@ -51,7 +51,7 @@ Partial Class prefixListForm
         Me.prefixListEPLDataGridView.ColumnHeadersVisible = False
         Me.prefixListEPLDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prefixList})
         Me.prefixListEPLDataGridView.EnableHeadersVisualStyles = False
-        Me.prefixListEPLDataGridView.Location = New System.Drawing.Point(81, 51)
+        Me.prefixListEPLDataGridView.Location = New System.Drawing.Point(112, 56)
         Me.prefixListEPLDataGridView.MultiSelect = False
         Me.prefixListEPLDataGridView.Name = "prefixListEPLDataGridView"
         Me.prefixListEPLDataGridView.RowHeadersVisible = False
@@ -59,7 +59,7 @@ Partial Class prefixListForm
         Me.prefixListEPLDataGridView.RowTemplate.Height = 30
         Me.prefixListEPLDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.prefixListEPLDataGridView.Size = New System.Drawing.Size(201, 336)
-        Me.prefixListEPLDataGridView.TabIndex = 6
+        Me.prefixListEPLDataGridView.TabIndex = 9
         '
         'prefixList
         '
@@ -70,38 +70,37 @@ Partial Class prefixListForm
         Me.prefixList.Name = "prefixList"
         Me.prefixList.Width = 200
         '
-        'prefixListEPLLabel
+        'pathAnalysisPALabel
         '
-        Me.prefixListEPLLabel.AutoSize = True
-        Me.prefixListEPLLabel.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.prefixListEPLLabel.Location = New System.Drawing.Point(13, 9)
-        Me.prefixListEPLLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.prefixListEPLLabel.Name = "prefixListEPLLabel"
-        Me.prefixListEPLLabel.Size = New System.Drawing.Size(343, 29)
-        Me.prefixListEPLLabel.TabIndex = 7
-        Me.prefixListEPLLabel.Text = "Edit the prefixes below as needed"
-        Me.prefixListEPLLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.pathAnalysisPALabel.AutoSize = True
+        Me.pathAnalysisPALabel.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pathAnalysisPALabel.Location = New System.Drawing.Point(13, 9)
+        Me.pathAnalysisPALabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.pathAnalysisPALabel.Name = "pathAnalysisPALabel"
+        Me.pathAnalysisPALabel.Size = New System.Drawing.Size(407, 29)
+        Me.pathAnalysisPALabel.TabIndex = 10
+        Me.pathAnalysisPALabel.Text = "Edit the analysis codes below as needed"
+        Me.pathAnalysisPALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'prefixListForm
+        'pathAnalysisForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(365, 448)
+        Me.ClientSize = New System.Drawing.Size(435, 451)
         Me.Controls.Add(Me.saveAndCloseButton)
         Me.Controls.Add(Me.prefixListEPLDataGridView)
-        Me.Controls.Add(Me.prefixListEPLLabel)
-        Me.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "prefixListForm"
+        Me.Controls.Add(Me.pathAnalysisPALabel)
+        Me.Name = "pathAnalysisForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Edit Prefix List"
+        Me.Text = "Pathogen Analysis Codes"
         CType(Me.prefixListEPLDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents saveAndCloseButton As System.Windows.Forms.Button
-    Friend WithEvents prefixListEPLDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents prefixListEPLLabel As System.Windows.Forms.Label
-    Friend WithEvents prefixList As System.Windows.Forms.DataGridViewTextBoxColumn
+
+    Friend WithEvents saveAndCloseButton As Button
+    Friend WithEvents prefixListEPLDataGridView As DataGridView
+    Friend WithEvents prefixList As DataGridViewTextBoxColumn
+    Friend WithEvents pathAnalysisPALabel As Label
 End Class

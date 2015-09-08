@@ -24,31 +24,31 @@ Partial Class databaseForm
     Private Sub InitializeComponent()
         Me.mainTabControl = New System.Windows.Forms.TabControl()
         Me.backupDBTabPage = New System.Windows.Forms.TabPage()
-        Me.restoreDBTabPage = New System.Windows.Forms.TabPage()
-        Me.connectDBTabPage = New System.Windows.Forms.TabPage()
-        Me.backupDaysCheckedListBox = New System.Windows.Forms.CheckedListBox()
-        Me.backupTimeDBDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.backupWhenLabel = New System.Windows.Forms.Label()
-        Me.backupAtLabel = New System.Windows.Forms.Label()
-        Me.backupLocationLabel = New System.Windows.Forms.Label()
-        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.backupDBLocationTextBox = New System.Windows.Forms.TextBox()
-        Me.getDBPathButton = New System.Windows.Forms.Button()
-        Me.saveDBBackupInformationButton = New System.Windows.Forms.Button()
         Me.backupNowButton = New System.Windows.Forms.Button()
+        Me.saveDBBackupInformationButton = New System.Windows.Forms.Button()
+        Me.getDBPathButton = New System.Windows.Forms.Button()
+        Me.backupDBLocationTextBox = New System.Windows.Forms.TextBox()
+        Me.backupLocationLabel = New System.Windows.Forms.Label()
+        Me.backupAtLabel = New System.Windows.Forms.Label()
+        Me.backupWhenLabel = New System.Windows.Forms.Label()
+        Me.backupTimeDBDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.backupDaysCheckedListBox = New System.Windows.Forms.CheckedListBox()
+        Me.restoreDBTabPage = New System.Windows.Forms.TabPage()
+        Me.restoreDBStatusTextLabel = New System.Windows.Forms.Label()
+        Me.restoreDBStatusLabel = New System.Windows.Forms.Label()
+        Me.restoreProgressLabel = New System.Windows.Forms.Label()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.restoreDBButton = New System.Windows.Forms.Button()
         Me.browseDBRestoreButton = New System.Windows.Forms.Button()
         Me.restoreDBBackupTextBox = New System.Windows.Forms.TextBox()
         Me.restoreDBBackupLabel = New System.Windows.Forms.Label()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.restoreProgressLabel = New System.Windows.Forms.Label()
-        Me.restoreDBStatusLabel = New System.Windows.Forms.Label()
-        Me.restoreDBStatusTextLabel = New System.Windows.Forms.Label()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.connectDBTabPage = New System.Windows.Forms.TabPage()
+        Me.saveDBConnectionButton = New System.Windows.Forms.Button()
         Me.browseDBConnectionButton = New System.Windows.Forms.Button()
         Me.DBConnectionTextBox = New System.Windows.Forms.TextBox()
         Me.DBConnectionLabel = New System.Windows.Forms.Label()
-        Me.saveDBConnectionButton = New System.Windows.Forms.Button()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.mainTabControl.SuspendLayout()
         Me.backupDBTabPage.SuspendLayout()
         Me.restoreDBTabPage.SuspendLayout()
@@ -88,6 +88,84 @@ Partial Class databaseForm
         Me.backupDBTabPage.Text = "Backup"
         Me.backupDBTabPage.UseVisualStyleBackColor = True
         '
+        'backupNowButton
+        '
+        Me.backupNowButton.Location = New System.Drawing.Point(263, 359)
+        Me.backupNowButton.Name = "backupNowButton"
+        Me.backupNowButton.Size = New System.Drawing.Size(146, 37)
+        Me.backupNowButton.TabIndex = 8
+        Me.backupNowButton.Text = "Backup Now"
+        Me.backupNowButton.UseVisualStyleBackColor = True
+        '
+        'saveDBBackupInformationButton
+        '
+        Me.saveDBBackupInformationButton.Location = New System.Drawing.Point(426, 359)
+        Me.saveDBBackupInformationButton.Name = "saveDBBackupInformationButton"
+        Me.saveDBBackupInformationButton.Size = New System.Drawing.Size(107, 37)
+        Me.saveDBBackupInformationButton.TabIndex = 7
+        Me.saveDBBackupInformationButton.Text = "Save"
+        Me.saveDBBackupInformationButton.UseVisualStyleBackColor = True
+        '
+        'getDBPathButton
+        '
+        Me.getDBPathButton.Location = New System.Drawing.Point(426, 295)
+        Me.getDBPathButton.Name = "getDBPathButton"
+        Me.getDBPathButton.Size = New System.Drawing.Size(107, 37)
+        Me.getDBPathButton.TabIndex = 6
+        Me.getDBPathButton.Text = "Browse"
+        Me.getDBPathButton.UseVisualStyleBackColor = True
+        '
+        'backupDBLocationTextBox
+        '
+        Me.backupDBLocationTextBox.Location = New System.Drawing.Point(13, 295)
+        Me.backupDBLocationTextBox.Name = "backupDBLocationTextBox"
+        Me.backupDBLocationTextBox.Size = New System.Drawing.Size(407, 37)
+        Me.backupDBLocationTextBox.TabIndex = 5
+        '
+        'backupLocationLabel
+        '
+        Me.backupLocationLabel.AutoSize = True
+        Me.backupLocationLabel.Location = New System.Drawing.Point(8, 263)
+        Me.backupLocationLabel.Name = "backupLocationLabel"
+        Me.backupLocationLabel.Size = New System.Drawing.Size(272, 29)
+        Me.backupLocationLabel.TabIndex = 4
+        Me.backupLocationLabel.Text = "Select the backup location"
+        '
+        'backupAtLabel
+        '
+        Me.backupAtLabel.AutoSize = True
+        Me.backupAtLabel.Location = New System.Drawing.Point(8, 120)
+        Me.backupAtLabel.Name = "backupAtLabel"
+        Me.backupAtLabel.Size = New System.Drawing.Size(39, 29)
+        Me.backupAtLabel.TabIndex = 3
+        Me.backupAtLabel.Text = "at:"
+        '
+        'backupWhenLabel
+        '
+        Me.backupWhenLabel.AutoSize = True
+        Me.backupWhenLabel.Location = New System.Drawing.Point(8, 19)
+        Me.backupWhenLabel.Name = "backupWhenLabel"
+        Me.backupWhenLabel.Size = New System.Drawing.Size(249, 29)
+        Me.backupWhenLabel.TabIndex = 2
+        Me.backupWhenLabel.Text = "Backup will occur every:"
+        '
+        'backupTimeDBDateTimePicker
+        '
+        Me.backupTimeDBDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.backupTimeDBDateTimePicker.Location = New System.Drawing.Point(53, 116)
+        Me.backupTimeDBDateTimePicker.Name = "backupTimeDBDateTimePicker"
+        Me.backupTimeDBDateTimePicker.Size = New System.Drawing.Size(162, 37)
+        Me.backupTimeDBDateTimePicker.TabIndex = 1
+        '
+        'backupDaysCheckedListBox
+        '
+        Me.backupDaysCheckedListBox.FormattingEnabled = True
+        Me.backupDaysCheckedListBox.Items.AddRange(New Object() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"})
+        Me.backupDaysCheckedListBox.Location = New System.Drawing.Point(263, 19)
+        Me.backupDaysCheckedListBox.Name = "backupDaysCheckedListBox"
+        Me.backupDaysCheckedListBox.Size = New System.Drawing.Size(146, 228)
+        Me.backupDaysCheckedListBox.TabIndex = 0
+        '
         'restoreDBTabPage
         '
         Me.restoreDBTabPage.Controls.Add(Me.restoreDBStatusTextLabel)
@@ -106,96 +184,39 @@ Partial Class databaseForm
         Me.restoreDBTabPage.Text = "Restore"
         Me.restoreDBTabPage.UseVisualStyleBackColor = True
         '
-        'connectDBTabPage
+        'restoreDBStatusTextLabel
         '
-        Me.connectDBTabPage.Controls.Add(Me.saveDBConnectionButton)
-        Me.connectDBTabPage.Controls.Add(Me.browseDBConnectionButton)
-        Me.connectDBTabPage.Controls.Add(Me.DBConnectionTextBox)
-        Me.connectDBTabPage.Controls.Add(Me.DBConnectionLabel)
-        Me.connectDBTabPage.Location = New System.Drawing.Point(4, 52)
-        Me.connectDBTabPage.Name = "connectDBTabPage"
-        Me.connectDBTabPage.Size = New System.Drawing.Size(550, 409)
-        Me.connectDBTabPage.TabIndex = 2
-        Me.connectDBTabPage.Text = "Connection"
-        Me.connectDBTabPage.UseVisualStyleBackColor = True
+        Me.restoreDBStatusTextLabel.AutoSize = True
+        Me.restoreDBStatusTextLabel.Location = New System.Drawing.Point(260, 202)
+        Me.restoreDBStatusTextLabel.Name = "restoreDBStatusTextLabel"
+        Me.restoreDBStatusTextLabel.Size = New System.Drawing.Size(74, 29)
+        Me.restoreDBStatusTextLabel.TabIndex = 15
+        Me.restoreDBStatusTextLabel.Text = "Ready"
         '
-        'backupDaysCheckedListBox
+        'restoreDBStatusLabel
         '
-        Me.backupDaysCheckedListBox.FormattingEnabled = True
-        Me.backupDaysCheckedListBox.Items.AddRange(New Object() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"})
-        Me.backupDaysCheckedListBox.Location = New System.Drawing.Point(263, 19)
-        Me.backupDaysCheckedListBox.Name = "backupDaysCheckedListBox"
-        Me.backupDaysCheckedListBox.Size = New System.Drawing.Size(146, 228)
-        Me.backupDaysCheckedListBox.TabIndex = 0
+        Me.restoreDBStatusLabel.AutoSize = True
+        Me.restoreDBStatusLabel.Location = New System.Drawing.Point(3, 202)
+        Me.restoreDBStatusLabel.Name = "restoreDBStatusLabel"
+        Me.restoreDBStatusLabel.Size = New System.Drawing.Size(251, 29)
+        Me.restoreDBStatusLabel.TabIndex = 14
+        Me.restoreDBStatusLabel.Text = "Database restore status:"
         '
-        'backupTimeDBDateTimePicker
+        'restoreProgressLabel
         '
-        Me.backupTimeDBDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.backupTimeDBDateTimePicker.Location = New System.Drawing.Point(53, 116)
-        Me.backupTimeDBDateTimePicker.Name = "backupTimeDBDateTimePicker"
-        Me.backupTimeDBDateTimePicker.Size = New System.Drawing.Size(162, 37)
-        Me.backupTimeDBDateTimePicker.TabIndex = 1
+        Me.restoreProgressLabel.AutoSize = True
+        Me.restoreProgressLabel.Location = New System.Drawing.Point(3, 132)
+        Me.restoreProgressLabel.Name = "restoreProgressLabel"
+        Me.restoreProgressLabel.Size = New System.Drawing.Size(275, 29)
+        Me.restoreProgressLabel.TabIndex = 13
+        Me.restoreProgressLabel.Text = "Database restore progress:"
         '
-        'backupWhenLabel
+        'ProgressBar1
         '
-        Me.backupWhenLabel.AutoSize = True
-        Me.backupWhenLabel.Location = New System.Drawing.Point(8, 19)
-        Me.backupWhenLabel.Name = "backupWhenLabel"
-        Me.backupWhenLabel.Size = New System.Drawing.Size(249, 29)
-        Me.backupWhenLabel.TabIndex = 2
-        Me.backupWhenLabel.Text = "Backup will occur every:"
-        '
-        'backupAtLabel
-        '
-        Me.backupAtLabel.AutoSize = True
-        Me.backupAtLabel.Location = New System.Drawing.Point(8, 120)
-        Me.backupAtLabel.Name = "backupAtLabel"
-        Me.backupAtLabel.Size = New System.Drawing.Size(39, 29)
-        Me.backupAtLabel.TabIndex = 3
-        Me.backupAtLabel.Text = "at:"
-        '
-        'backupLocationLabel
-        '
-        Me.backupLocationLabel.AutoSize = True
-        Me.backupLocationLabel.Location = New System.Drawing.Point(8, 263)
-        Me.backupLocationLabel.Name = "backupLocationLabel"
-        Me.backupLocationLabel.Size = New System.Drawing.Size(272, 29)
-        Me.backupLocationLabel.TabIndex = 4
-        Me.backupLocationLabel.Text = "Select the backup location"
-        '
-        'backupDBLocationTextBox
-        '
-        Me.backupDBLocationTextBox.Location = New System.Drawing.Point(13, 295)
-        Me.backupDBLocationTextBox.Name = "backupDBLocationTextBox"
-        Me.backupDBLocationTextBox.Size = New System.Drawing.Size(407, 37)
-        Me.backupDBLocationTextBox.TabIndex = 5
-        '
-        'getDBPathButton
-        '
-        Me.getDBPathButton.Location = New System.Drawing.Point(426, 295)
-        Me.getDBPathButton.Name = "getDBPathButton"
-        Me.getDBPathButton.Size = New System.Drawing.Size(107, 37)
-        Me.getDBPathButton.TabIndex = 6
-        Me.getDBPathButton.Text = "Browse"
-        Me.getDBPathButton.UseVisualStyleBackColor = True
-        '
-        'saveDBBackupInformationButton
-        '
-        Me.saveDBBackupInformationButton.Location = New System.Drawing.Point(426, 359)
-        Me.saveDBBackupInformationButton.Name = "saveDBBackupInformationButton"
-        Me.saveDBBackupInformationButton.Size = New System.Drawing.Size(107, 37)
-        Me.saveDBBackupInformationButton.TabIndex = 7
-        Me.saveDBBackupInformationButton.Text = "Save"
-        Me.saveDBBackupInformationButton.UseVisualStyleBackColor = True
-        '
-        'backupNowButton
-        '
-        Me.backupNowButton.Location = New System.Drawing.Point(263, 359)
-        Me.backupNowButton.Name = "backupNowButton"
-        Me.backupNowButton.Size = New System.Drawing.Size(146, 37)
-        Me.backupNowButton.TabIndex = 8
-        Me.backupNowButton.Text = "Backup Now"
-        Me.backupNowButton.UseVisualStyleBackColor = True
+        Me.ProgressBar1.Location = New System.Drawing.Point(8, 164)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(407, 23)
+        Me.ProgressBar1.TabIndex = 12
         '
         'restoreDBButton
         '
@@ -231,43 +252,27 @@ Partial Class databaseForm
         Me.restoreDBBackupLabel.TabIndex = 8
         Me.restoreDBBackupLabel.Text = "Select the backup to restore"
         '
-        'ProgressBar1
+        'connectDBTabPage
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(8, 164)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(407, 23)
-        Me.ProgressBar1.TabIndex = 12
+        Me.connectDBTabPage.Controls.Add(Me.saveDBConnectionButton)
+        Me.connectDBTabPage.Controls.Add(Me.browseDBConnectionButton)
+        Me.connectDBTabPage.Controls.Add(Me.DBConnectionTextBox)
+        Me.connectDBTabPage.Controls.Add(Me.DBConnectionLabel)
+        Me.connectDBTabPage.Location = New System.Drawing.Point(4, 52)
+        Me.connectDBTabPage.Name = "connectDBTabPage"
+        Me.connectDBTabPage.Size = New System.Drawing.Size(550, 409)
+        Me.connectDBTabPage.TabIndex = 2
+        Me.connectDBTabPage.Text = "Connection"
+        Me.connectDBTabPage.UseVisualStyleBackColor = True
         '
-        'restoreProgressLabel
+        'saveDBConnectionButton
         '
-        Me.restoreProgressLabel.AutoSize = True
-        Me.restoreProgressLabel.Location = New System.Drawing.Point(3, 132)
-        Me.restoreProgressLabel.Name = "restoreProgressLabel"
-        Me.restoreProgressLabel.Size = New System.Drawing.Size(275, 29)
-        Me.restoreProgressLabel.TabIndex = 13
-        Me.restoreProgressLabel.Text = "Database restore progress:"
-        '
-        'restoreDBStatusLabel
-        '
-        Me.restoreDBStatusLabel.AutoSize = True
-        Me.restoreDBStatusLabel.Location = New System.Drawing.Point(3, 202)
-        Me.restoreDBStatusLabel.Name = "restoreDBStatusLabel"
-        Me.restoreDBStatusLabel.Size = New System.Drawing.Size(251, 29)
-        Me.restoreDBStatusLabel.TabIndex = 14
-        Me.restoreDBStatusLabel.Text = "Database restore status:"
-        '
-        'restoreDBStatusTextLabel
-        '
-        Me.restoreDBStatusTextLabel.AutoSize = True
-        Me.restoreDBStatusTextLabel.Location = New System.Drawing.Point(260, 202)
-        Me.restoreDBStatusTextLabel.Name = "restoreDBStatusTextLabel"
-        Me.restoreDBStatusTextLabel.Size = New System.Drawing.Size(74, 29)
-        Me.restoreDBStatusTextLabel.TabIndex = 15
-        Me.restoreDBStatusTextLabel.Text = "Ready"
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.saveDBConnectionButton.Location = New System.Drawing.Point(426, 364)
+        Me.saveDBConnectionButton.Name = "saveDBConnectionButton"
+        Me.saveDBConnectionButton.Size = New System.Drawing.Size(107, 37)
+        Me.saveDBConnectionButton.TabIndex = 14
+        Me.saveDBConnectionButton.Text = "Save"
+        Me.saveDBConnectionButton.UseVisualStyleBackColor = True
         '
         'browseDBConnectionButton
         '
@@ -294,22 +299,19 @@ Partial Class databaseForm
         Me.DBConnectionLabel.TabIndex = 11
         Me.DBConnectionLabel.Text = "Connect to the database"
         '
-        'saveDBConnectionButton
+        'OpenFileDialog1
         '
-        Me.saveDBConnectionButton.Location = New System.Drawing.Point(426, 364)
-        Me.saveDBConnectionButton.Name = "saveDBConnectionButton"
-        Me.saveDBConnectionButton.Size = New System.Drawing.Size(107, 37)
-        Me.saveDBConnectionButton.TabIndex = 14
-        Me.saveDBConnectionButton.Text = "Save"
-        Me.saveDBConnectionButton.UseVisualStyleBackColor = True
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'databaseForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(558, 465)
         Me.Controls.Add(Me.mainTabControl)
         Me.Name = "databaseForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "databaseForm"
         Me.mainTabControl.ResumeLayout(False)
         Me.backupDBTabPage.ResumeLayout(False)

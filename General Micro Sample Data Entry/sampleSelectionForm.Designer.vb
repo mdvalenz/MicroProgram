@@ -44,12 +44,13 @@ Partial Class sampleSelectionForm
         '
         Me.projectDataIPDTabControl.Controls.Add(Me.projectNumberPage)
         Me.projectDataIPDTabControl.Controls.Add(Me.SampleIDPage)
+        Me.projectDataIPDTabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.projectDataIPDTabControl.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.projectDataIPDTabControl.Location = New System.Drawing.Point(13, 13)
+        Me.projectDataIPDTabControl.Location = New System.Drawing.Point(0, 0)
         Me.projectDataIPDTabControl.Margin = New System.Windows.Forms.Padding(4)
         Me.projectDataIPDTabControl.Name = "projectDataIPDTabControl"
         Me.projectDataIPDTabControl.SelectedIndex = 0
-        Me.projectDataIPDTabControl.Size = New System.Drawing.Size(354, 506)
+        Me.projectDataIPDTabControl.Size = New System.Drawing.Size(326, 502)
         Me.projectDataIPDTabControl.TabIndex = 1
         Me.projectDataIPDTabControl.TabStop = False
         '
@@ -63,7 +64,7 @@ Partial Class sampleSelectionForm
         Me.projectNumberPage.Margin = New System.Windows.Forms.Padding(4)
         Me.projectNumberPage.Name = "projectNumberPage"
         Me.projectNumberPage.Padding = New System.Windows.Forms.Padding(4)
-        Me.projectNumberPage.Size = New System.Drawing.Size(346, 474)
+        Me.projectNumberPage.Size = New System.Drawing.Size(318, 470)
         Me.projectNumberPage.TabIndex = 0
         Me.projectNumberPage.Text = "Project Number Entry"
         Me.projectNumberPage.UseVisualStyleBackColor = True
@@ -71,7 +72,7 @@ Partial Class sampleSelectionForm
         'importProjectNumbersIPDButton
         '
         Me.importProjectNumbersIPDButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.importProjectNumbersIPDButton.Location = New System.Drawing.Point(109, 413)
+        Me.importProjectNumbersIPDButton.Location = New System.Drawing.Point(92, 413)
         Me.importProjectNumbersIPDButton.Name = "importProjectNumbersIPDButton"
         Me.importProjectNumbersIPDButton.Size = New System.Drawing.Size(130, 42)
         Me.importProjectNumbersIPDButton.TabIndex = 2
@@ -90,7 +91,7 @@ Partial Class sampleSelectionForm
         Me.projectNumbersIPDDataGridView.ColumnHeadersVisible = False
         Me.projectNumbersIPDDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.projectNumbersTable})
         Me.projectNumbersIPDDataGridView.EnableHeadersVisualStyles = False
-        Me.projectNumbersIPDDataGridView.Location = New System.Drawing.Point(73, 64)
+        Me.projectNumbersIPDDataGridView.Location = New System.Drawing.Point(57, 64)
         Me.projectNumbersIPDDataGridView.MultiSelect = False
         Me.projectNumbersIPDDataGridView.Name = "projectNumbersIPDDataGridView"
         Me.projectNumbersIPDDataGridView.RowHeadersVisible = False
@@ -113,12 +114,12 @@ Partial Class sampleSelectionForm
         '
         Me.projectNumbersIPDLabel.AutoSize = True
         Me.projectNumbersIPDLabel.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.projectNumbersIPDLabel.Location = New System.Drawing.Point(25, 23)
+        Me.projectNumbersIPDLabel.Location = New System.Drawing.Point(35, 23)
         Me.projectNumbersIPDLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.projectNumbersIPDLabel.Name = "projectNumbersIPDLabel"
-        Me.projectNumbersIPDLabel.Size = New System.Drawing.Size(299, 29)
+        Me.projectNumbersIPDLabel.Size = New System.Drawing.Size(249, 29)
         Me.projectNumbersIPDLabel.TabIndex = 0
-        Me.projectNumbersIPDLabel.Text = "Enter your Project Number(s)"
+        Me.projectNumbersIPDLabel.Text = "Enter Project Number(s)"
         Me.projectNumbersIPDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SampleIDPage
@@ -131,7 +132,7 @@ Partial Class sampleSelectionForm
         Me.SampleIDPage.Margin = New System.Windows.Forms.Padding(4)
         Me.SampleIDPage.Name = "SampleIDPage"
         Me.SampleIDPage.Padding = New System.Windows.Forms.Padding(4)
-        Me.SampleIDPage.Size = New System.Drawing.Size(346, 474)
+        Me.SampleIDPage.Size = New System.Drawing.Size(318, 470)
         Me.SampleIDPage.TabIndex = 1
         Me.SampleIDPage.Text = "Sample Number Entry"
         Me.SampleIDPage.UseVisualStyleBackColor = True
@@ -139,7 +140,7 @@ Partial Class sampleSelectionForm
         'importSampleIDsIPDButton
         '
         Me.importSampleIDsIPDButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.importSampleIDsIPDButton.Location = New System.Drawing.Point(109, 413)
+        Me.importSampleIDsIPDButton.Location = New System.Drawing.Point(92, 413)
         Me.importSampleIDsIPDButton.Name = "importSampleIDsIPDButton"
         Me.importSampleIDsIPDButton.Size = New System.Drawing.Size(130, 42)
         Me.importSampleIDsIPDButton.TabIndex = 5
@@ -157,7 +158,7 @@ Partial Class sampleSelectionForm
         Me.sampleIDsIPDDataGridView.ColumnHeadersVisible = False
         Me.sampleIDsIPDDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1})
         Me.sampleIDsIPDDataGridView.EnableHeadersVisualStyles = False
-        Me.sampleIDsIPDDataGridView.Location = New System.Drawing.Point(73, 64)
+        Me.sampleIDsIPDDataGridView.Location = New System.Drawing.Point(57, 64)
         Me.sampleIDsIPDDataGridView.MultiSelect = False
         Me.sampleIDsIPDDataGridView.Name = "sampleIDsIPDDataGridView"
         Me.sampleIDsIPDDataGridView.RowHeadersVisible = False
@@ -180,19 +181,20 @@ Partial Class sampleSelectionForm
         '
         Me.sampleIDsIPDLabel.AutoSize = True
         Me.sampleIDsIPDLabel.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sampleIDsIPDLabel.Location = New System.Drawing.Point(24, 23)
+        Me.sampleIDsIPDLabel.Location = New System.Drawing.Point(33, 23)
         Me.sampleIDsIPDLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.sampleIDsIPDLabel.Name = "sampleIDsIPDLabel"
-        Me.sampleIDsIPDLabel.Size = New System.Drawing.Size(303, 29)
+        Me.sampleIDsIPDLabel.Size = New System.Drawing.Size(253, 29)
         Me.sampleIDsIPDLabel.TabIndex = 3
-        Me.sampleIDsIPDLabel.Text = "Enter your Sample Number(s)"
+        Me.sampleIDsIPDLabel.Text = "Enter Sample Number(s)"
         Me.sampleIDsIPDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'sampleSelectionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(378, 532)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(326, 502)
         Me.Controls.Add(Me.projectDataIPDTabControl)
         Me.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "sampleSelectionForm"

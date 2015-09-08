@@ -32,9 +32,9 @@ Partial Class MainForm
         Me.enterConfirmationResultsSDEButton = New System.Windows.Forms.Button()
         Me.pullConfirmationsSDEButton = New System.Windows.Forms.Button()
         Me.incubateConfirmationsSDEButton = New System.Windows.Forms.Button()
-        Me.ecoliColiformsSDEButton = New System.Windows.Forms.Button()
-        Me.fecalColiformsSDEButton = New System.Windows.Forms.Button()
-        Me.coliformConfirmationsSDEButton = New System.Windows.Forms.Button()
+        Me.enterMPNResultsSDEButton = New System.Windows.Forms.Button()
+        Me.pullMPNSamplesSDEButton = New System.Windows.Forms.Button()
+        Me.incubateMPNSamplesSDEButton = New System.Windows.Forms.Button()
         Me.generalSamplesSDEGroupBox = New System.Windows.Forms.GroupBox()
         Me.MPNOptionsSDEGroupBox = New System.Windows.Forms.GroupBox()
         Me.confirmationsSDEGroupBox = New System.Windows.Forms.GroupBox()
@@ -46,15 +46,14 @@ Partial Class MainForm
         Me.techniciansSDETabPage = New System.Windows.Forms.TabPage()
         Me.notCompletedItemsSDEButton = New System.Windows.Forms.Button()
         Me.firstReviewersTabPage = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.mediaQCButton = New System.Windows.Forms.Button()
+        Me.exportLWButton = New System.Windows.Forms.Button()
+        Me.firstReviewButton = New System.Windows.Forms.Button()
         Me.adminsTabPage = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.pathListButton = New System.Windows.Forms.Button()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EMailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAuditTrailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.generalSamplesSDEGroupBox.SuspendLayout()
         Me.MPNOptionsSDEGroupBox.SuspendLayout()
@@ -70,9 +69,9 @@ Partial Class MainForm
         'importSamplesSDEButton
         '
         Me.importSamplesSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.importSamplesSDEButton.Location = New System.Drawing.Point(6, 32)
+        Me.importSamplesSDEButton.Location = New System.Drawing.Point(10, 277)
         Me.importSamplesSDEButton.Name = "importSamplesSDEButton"
-        Me.importSamplesSDEButton.Size = New System.Drawing.Size(195, 43)
+        Me.importSamplesSDEButton.Size = New System.Drawing.Size(213, 43)
         Me.importSamplesSDEButton.TabIndex = 1
         Me.importSamplesSDEButton.Text = "Import Samples"
         Me.importSamplesSDEButton.UseVisualStyleBackColor = True
@@ -84,7 +83,7 @@ Partial Class MainForm
         Me.authorizedPersonnelSDEButton.Name = "authorizedPersonnelSDEButton"
         Me.authorizedPersonnelSDEButton.Size = New System.Drawing.Size(284, 43)
         Me.authorizedPersonnelSDEButton.TabIndex = 2
-        Me.authorizedPersonnelSDEButton.Text = "Edit Authorized Personnel"
+        Me.authorizedPersonnelSDEButton.Text = "Authorized Personnel"
         Me.authorizedPersonnelSDEButton.UseVisualStyleBackColor = True
         '
         'editPrefixListSDEButton
@@ -94,13 +93,13 @@ Partial Class MainForm
         Me.editPrefixListSDEButton.Name = "editPrefixListSDEButton"
         Me.editPrefixListSDEButton.Size = New System.Drawing.Size(284, 43)
         Me.editPrefixListSDEButton.TabIndex = 1
-        Me.editPrefixListSDEButton.Text = "Edit Prefix List"
+        Me.editPrefixListSDEButton.Text = "Prefix List"
         Me.editPrefixListSDEButton.UseVisualStyleBackColor = True
         '
         'weighSamplesSDEButton
         '
         Me.weighSamplesSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.weighSamplesSDEButton.Location = New System.Drawing.Point(6, 81)
+        Me.weighSamplesSDEButton.Location = New System.Drawing.Point(6, 32)
         Me.weighSamplesSDEButton.Name = "weighSamplesSDEButton"
         Me.weighSamplesSDEButton.Size = New System.Drawing.Size(195, 43)
         Me.weighSamplesSDEButton.TabIndex = 2
@@ -110,7 +109,7 @@ Partial Class MainForm
         'incubateSamplesSDEButton
         '
         Me.incubateSamplesSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.incubateSamplesSDEButton.Location = New System.Drawing.Point(6, 130)
+        Me.incubateSamplesSDEButton.Location = New System.Drawing.Point(6, 81)
         Me.incubateSamplesSDEButton.Name = "incubateSamplesSDEButton"
         Me.incubateSamplesSDEButton.Size = New System.Drawing.Size(195, 43)
         Me.incubateSamplesSDEButton.TabIndex = 3
@@ -120,7 +119,7 @@ Partial Class MainForm
         'pullSamplesSDEButton
         '
         Me.pullSamplesSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pullSamplesSDEButton.Location = New System.Drawing.Point(6, 179)
+        Me.pullSamplesSDEButton.Location = New System.Drawing.Point(6, 130)
         Me.pullSamplesSDEButton.Name = "pullSamplesSDEButton"
         Me.pullSamplesSDEButton.Size = New System.Drawing.Size(195, 43)
         Me.pullSamplesSDEButton.TabIndex = 4
@@ -130,7 +129,7 @@ Partial Class MainForm
         'enterResultsSDEButton
         '
         Me.enterResultsSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.enterResultsSDEButton.Location = New System.Drawing.Point(6, 228)
+        Me.enterResultsSDEButton.Location = New System.Drawing.Point(6, 179)
         Me.enterResultsSDEButton.Name = "enterResultsSDEButton"
         Me.enterResultsSDEButton.Size = New System.Drawing.Size(195, 43)
         Me.enterResultsSDEButton.TabIndex = 5
@@ -167,35 +166,35 @@ Partial Class MainForm
         Me.incubateConfirmationsSDEButton.Text = "Incubate Confirmations"
         Me.incubateConfirmationsSDEButton.UseVisualStyleBackColor = True
         '
-        'ecoliColiformsSDEButton
+        'enterMPNResultsSDEButton
         '
-        Me.ecoliColiformsSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ecoliColiformsSDEButton.Location = New System.Drawing.Point(6, 130)
-        Me.ecoliColiformsSDEButton.Name = "ecoliColiformsSDEButton"
-        Me.ecoliColiformsSDEButton.Size = New System.Drawing.Size(284, 43)
-        Me.ecoliColiformsSDEButton.TabIndex = 8
-        Me.ecoliColiformsSDEButton.Text = "E. coli"
-        Me.ecoliColiformsSDEButton.UseVisualStyleBackColor = True
+        Me.enterMPNResultsSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.enterMPNResultsSDEButton.Location = New System.Drawing.Point(6, 130)
+        Me.enterMPNResultsSDEButton.Name = "enterMPNResultsSDEButton"
+        Me.enterMPNResultsSDEButton.Size = New System.Drawing.Size(284, 43)
+        Me.enterMPNResultsSDEButton.TabIndex = 8
+        Me.enterMPNResultsSDEButton.Text = "Enter Results"
+        Me.enterMPNResultsSDEButton.UseVisualStyleBackColor = True
         '
-        'fecalColiformsSDEButton
+        'pullMPNSamplesSDEButton
         '
-        Me.fecalColiformsSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fecalColiformsSDEButton.Location = New System.Drawing.Point(6, 81)
-        Me.fecalColiformsSDEButton.Name = "fecalColiformsSDEButton"
-        Me.fecalColiformsSDEButton.Size = New System.Drawing.Size(284, 43)
-        Me.fecalColiformsSDEButton.TabIndex = 7
-        Me.fecalColiformsSDEButton.Text = "Fecal Coliforms"
-        Me.fecalColiformsSDEButton.UseVisualStyleBackColor = True
+        Me.pullMPNSamplesSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pullMPNSamplesSDEButton.Location = New System.Drawing.Point(6, 81)
+        Me.pullMPNSamplesSDEButton.Name = "pullMPNSamplesSDEButton"
+        Me.pullMPNSamplesSDEButton.Size = New System.Drawing.Size(284, 43)
+        Me.pullMPNSamplesSDEButton.TabIndex = 7
+        Me.pullMPNSamplesSDEButton.Text = "Pull Samples"
+        Me.pullMPNSamplesSDEButton.UseVisualStyleBackColor = True
         '
-        'coliformConfirmationsSDEButton
+        'incubateMPNSamplesSDEButton
         '
-        Me.coliformConfirmationsSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.coliformConfirmationsSDEButton.Location = New System.Drawing.Point(6, 32)
-        Me.coliformConfirmationsSDEButton.Name = "coliformConfirmationsSDEButton"
-        Me.coliformConfirmationsSDEButton.Size = New System.Drawing.Size(284, 43)
-        Me.coliformConfirmationsSDEButton.TabIndex = 6
-        Me.coliformConfirmationsSDEButton.Text = "Coliform Confirmations"
-        Me.coliformConfirmationsSDEButton.UseVisualStyleBackColor = True
+        Me.incubateMPNSamplesSDEButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.incubateMPNSamplesSDEButton.Location = New System.Drawing.Point(6, 32)
+        Me.incubateMPNSamplesSDEButton.Name = "incubateMPNSamplesSDEButton"
+        Me.incubateMPNSamplesSDEButton.Size = New System.Drawing.Size(284, 43)
+        Me.incubateMPNSamplesSDEButton.TabIndex = 6
+        Me.incubateMPNSamplesSDEButton.Text = "Incubate Samples"
+        Me.incubateMPNSamplesSDEButton.UseVisualStyleBackColor = True
         '
         'generalSamplesSDEGroupBox
         '
@@ -203,27 +202,26 @@ Partial Class MainForm
         Me.generalSamplesSDEGroupBox.Controls.Add(Me.pullSamplesSDEButton)
         Me.generalSamplesSDEGroupBox.Controls.Add(Me.incubateSamplesSDEButton)
         Me.generalSamplesSDEGroupBox.Controls.Add(Me.weighSamplesSDEButton)
-        Me.generalSamplesSDEGroupBox.Controls.Add(Me.importSamplesSDEButton)
         Me.generalSamplesSDEGroupBox.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.generalSamplesSDEGroupBox.Location = New System.Drawing.Point(10, 25)
         Me.generalSamplesSDEGroupBox.Name = "generalSamplesSDEGroupBox"
-        Me.generalSamplesSDEGroupBox.Size = New System.Drawing.Size(210, 282)
+        Me.generalSamplesSDEGroupBox.Size = New System.Drawing.Size(210, 232)
         Me.generalSamplesSDEGroupBox.TabIndex = 20
         Me.generalSamplesSDEGroupBox.TabStop = False
         Me.generalSamplesSDEGroupBox.Text = "General Samples"
         '
         'MPNOptionsSDEGroupBox
         '
-        Me.MPNOptionsSDEGroupBox.Controls.Add(Me.ecoliColiformsSDEButton)
-        Me.MPNOptionsSDEGroupBox.Controls.Add(Me.fecalColiformsSDEButton)
-        Me.MPNOptionsSDEGroupBox.Controls.Add(Me.coliformConfirmationsSDEButton)
+        Me.MPNOptionsSDEGroupBox.Controls.Add(Me.enterMPNResultsSDEButton)
+        Me.MPNOptionsSDEGroupBox.Controls.Add(Me.pullMPNSamplesSDEButton)
+        Me.MPNOptionsSDEGroupBox.Controls.Add(Me.incubateMPNSamplesSDEButton)
         Me.MPNOptionsSDEGroupBox.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MPNOptionsSDEGroupBox.Location = New System.Drawing.Point(241, 25)
         Me.MPNOptionsSDEGroupBox.Name = "MPNOptionsSDEGroupBox"
         Me.MPNOptionsSDEGroupBox.Size = New System.Drawing.Size(298, 185)
         Me.MPNOptionsSDEGroupBox.TabIndex = 21
         Me.MPNOptionsSDEGroupBox.TabStop = False
-        Me.MPNOptionsSDEGroupBox.Text = "MPN Options"
+        Me.MPNOptionsSDEGroupBox.Text = "MPNs"
         '
         'confirmationsSDEGroupBox
         '
@@ -301,6 +299,7 @@ Partial Class MainForm
         Me.techniciansSDETabPage.Controls.Add(Me.generalSamplesSDEGroupBox)
         Me.techniciansSDETabPage.Controls.Add(Me.printDailyPullListsSDEButton)
         Me.techniciansSDETabPage.Controls.Add(Me.confirmationsSDEGroupBox)
+        Me.techniciansSDETabPage.Controls.Add(Me.importSamplesSDEButton)
         Me.techniciansSDETabPage.Controls.Add(Me.MPNOptionsSDEGroupBox)
         Me.techniciansSDETabPage.Location = New System.Drawing.Point(4, 52)
         Me.techniciansSDETabPage.Name = "techniciansSDETabPage"
@@ -323,9 +322,9 @@ Partial Class MainForm
         '
         'firstReviewersTabPage
         '
-        Me.firstReviewersTabPage.Controls.Add(Me.Button1)
-        Me.firstReviewersTabPage.Controls.Add(Me.Button5)
-        Me.firstReviewersTabPage.Controls.Add(Me.Button4)
+        Me.firstReviewersTabPage.Controls.Add(Me.mediaQCButton)
+        Me.firstReviewersTabPage.Controls.Add(Me.exportLWButton)
+        Me.firstReviewersTabPage.Controls.Add(Me.firstReviewButton)
         Me.firstReviewersTabPage.Location = New System.Drawing.Point(4, 52)
         Me.firstReviewersTabPage.Name = "firstReviewersTabPage"
         Me.firstReviewersTabPage.Padding = New System.Windows.Forms.Padding(3)
@@ -334,40 +333,40 @@ Partial Class MainForm
         Me.firstReviewersTabPage.Text = "1st Reviewers"
         Me.firstReviewersTabPage.UseVisualStyleBackColor = True
         '
-        'Button1
+        'mediaQCButton
         '
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(78, 115)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(320, 43)
-        Me.Button1.TabIndex = 3
-        Me.Button1.TabStop = False
-        Me.Button1.Text = "Media QC Results"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.mediaQCButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mediaQCButton.Location = New System.Drawing.Point(78, 115)
+        Me.mediaQCButton.Name = "mediaQCButton"
+        Me.mediaQCButton.Size = New System.Drawing.Size(320, 43)
+        Me.mediaQCButton.TabIndex = 3
+        Me.mediaQCButton.TabStop = False
+        Me.mediaQCButton.Text = "Media QC Results"
+        Me.mediaQCButton.UseVisualStyleBackColor = True
         '
-        'Button5
+        'exportLWButton
         '
-        Me.Button5.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(78, 66)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(320, 43)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Ready for Export to LabWorks"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.exportLWButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exportLWButton.Location = New System.Drawing.Point(78, 66)
+        Me.exportLWButton.Name = "exportLWButton"
+        Me.exportLWButton.Size = New System.Drawing.Size(320, 43)
+        Me.exportLWButton.TabIndex = 2
+        Me.exportLWButton.Text = "Ready for Export to LabWorks"
+        Me.exportLWButton.UseVisualStyleBackColor = True
         '
-        'Button4
+        'firstReviewButton
         '
-        Me.Button4.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(78, 17)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(320, 43)
-        Me.Button4.TabIndex = 1
-        Me.Button4.Text = "Waiting on 1st Review"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.firstReviewButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.firstReviewButton.Location = New System.Drawing.Point(78, 17)
+        Me.firstReviewButton.Name = "firstReviewButton"
+        Me.firstReviewButton.Size = New System.Drawing.Size(320, 43)
+        Me.firstReviewButton.TabIndex = 1
+        Me.firstReviewButton.Text = "Waiting on 1st Review"
+        Me.firstReviewButton.UseVisualStyleBackColor = True
         '
         'adminsTabPage
         '
-        Me.adminsTabPage.Controls.Add(Me.Button2)
+        Me.adminsTabPage.Controls.Add(Me.pathListButton)
         Me.adminsTabPage.Controls.Add(Me.editPrefixListSDEButton)
         Me.adminsTabPage.Controls.Add(Me.authorizedPersonnelSDEButton)
         Me.adminsTabPage.Location = New System.Drawing.Point(4, 52)
@@ -377,15 +376,15 @@ Partial Class MainForm
         Me.adminsTabPage.Text = "Administrators"
         Me.adminsTabPage.UseVisualStyleBackColor = True
         '
-        'Button2
+        'pathListButton
         '
-        Me.Button2.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(263, 115)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(284, 43)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Edit Pathogen Analysis List"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.pathListButton.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pathListButton.Location = New System.Drawing.Point(263, 115)
+        Me.pathListButton.Name = "pathListButton"
+        Me.pathListButton.Size = New System.Drawing.Size(284, 43)
+        Me.pathListButton.TabIndex = 3
+        Me.pathListButton.Text = "Pathogen Analysis List"
+        Me.pathListButton.UseVisualStyleBackColor = True
         '
         'MenuStrip2
         '
@@ -399,7 +398,7 @@ Partial Class MainForm
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseToolStripMenuItem, Me.EMailToolStripMenuItem, Me.ViewAuditTrailToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseToolStripMenuItem, Me.ViewAuditTrailToolStripMenuItem})
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.SettingsToolStripMenuItem.Text = "Options"
@@ -407,19 +406,13 @@ Partial Class MainForm
         'DatabaseToolStripMenuItem
         '
         Me.DatabaseToolStripMenuItem.Name = "DatabaseToolStripMenuItem"
-        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.DatabaseToolStripMenuItem.Text = "Database"
-        '
-        'EMailToolStripMenuItem
-        '
-        Me.EMailToolStripMenuItem.Name = "EMailToolStripMenuItem"
-        Me.EMailToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EMailToolStripMenuItem.Text = "E-Mail"
         '
         'ViewAuditTrailToolStripMenuItem
         '
         Me.ViewAuditTrailToolStripMenuItem.Name = "ViewAuditTrailToolStripMenuItem"
-        Me.ViewAuditTrailToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewAuditTrailToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.ViewAuditTrailToolStripMenuItem.Text = "Audit Trail"
         '
         'MainForm
@@ -461,9 +454,9 @@ Partial Class MainForm
     Friend WithEvents enterConfirmationResultsSDEButton As System.Windows.Forms.Button
     Friend WithEvents pullConfirmationsSDEButton As System.Windows.Forms.Button
     Friend WithEvents incubateConfirmationsSDEButton As System.Windows.Forms.Button
-    Friend WithEvents ecoliColiformsSDEButton As System.Windows.Forms.Button
-    Friend WithEvents fecalColiformsSDEButton As System.Windows.Forms.Button
-    Friend WithEvents coliformConfirmationsSDEButton As System.Windows.Forms.Button
+    Friend WithEvents enterMPNResultsSDEButton As System.Windows.Forms.Button
+    Friend WithEvents pullMPNSamplesSDEButton As System.Windows.Forms.Button
+    Friend WithEvents incubateMPNSamplesSDEButton As System.Windows.Forms.Button
     Friend WithEvents generalSamplesSDEGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents MPNOptionsSDEGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents confirmationsSDEGroupBox As System.Windows.Forms.GroupBox
@@ -472,17 +465,16 @@ Partial Class MainForm
     Friend WithEvents mainTabControl As System.Windows.Forms.TabControl
     Friend WithEvents techniciansSDETabPage As System.Windows.Forms.TabPage
     Friend WithEvents firstReviewersTabPage As System.Windows.Forms.TabPage
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents exportLWButton As System.Windows.Forms.Button
+    Friend WithEvents firstReviewButton As System.Windows.Forms.Button
     Friend WithEvents adminsTabPage As System.Windows.Forms.TabPage
     Friend WithEvents ToolStripTextBox2 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents notCompletedItemsSDEButton As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents mediaQCButton As System.Windows.Forms.Button
+    Friend WithEvents pathListButton As Button
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DatabaseToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EMailToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewAuditTrailToolStripMenuItem As ToolStripMenuItem
 End Class

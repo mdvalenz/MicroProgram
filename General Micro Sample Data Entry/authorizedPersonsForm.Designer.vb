@@ -188,7 +188,7 @@ Partial Class authorizedPersonsForm
         '
         Me.firstReviewAPLabel.AutoSize = True
         Me.firstReviewAPLabel.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstReviewAPLabel.Location = New System.Drawing.Point(0, 16)
+        Me.firstReviewAPLabel.Location = New System.Drawing.Point(1, 16)
         Me.firstReviewAPLabel.Name = "firstReviewAPLabel"
         Me.firstReviewAPLabel.Size = New System.Drawing.Size(446, 26)
         Me.firstReviewAPLabel.TabIndex = 14
@@ -219,6 +219,7 @@ Partial Class authorizedPersonsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(662, 459)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.adminAPCheckBox)
