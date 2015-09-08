@@ -50,9 +50,9 @@ Partial Class MainForm
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.adminsTabPage = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.DatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EMailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAuditTrailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -377,6 +377,16 @@ Partial Class MainForm
         Me.adminsTabPage.Text = "Administrators"
         Me.adminsTabPage.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(263, 115)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(284, 43)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Edit Pathogen Analysis List"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'MenuStrip2
         '
         Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
@@ -394,33 +404,23 @@ Partial Class MainForm
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.SettingsToolStripMenuItem.Text = "Options"
         '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(263, 115)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(284, 43)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Edit Pathogen Analysis List"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'DatabaseToolStripMenuItem
         '
         Me.DatabaseToolStripMenuItem.Name = "DatabaseToolStripMenuItem"
-        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DatabaseToolStripMenuItem.Text = "Select Database"
+        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DatabaseToolStripMenuItem.Text = "Database"
         '
         'EMailToolStripMenuItem
         '
         Me.EMailToolStripMenuItem.Name = "EMailToolStripMenuItem"
-        Me.EMailToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.EMailToolStripMenuItem.Text = "Configure E-Mail"
+        Me.EMailToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EMailToolStripMenuItem.Text = "E-Mail"
         '
         'ViewAuditTrailToolStripMenuItem
         '
         Me.ViewAuditTrailToolStripMenuItem.Name = "ViewAuditTrailToolStripMenuItem"
-        Me.ViewAuditTrailToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.ViewAuditTrailToolStripMenuItem.Text = "View Audit Trail"
+        Me.ViewAuditTrailToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewAuditTrailToolStripMenuItem.Text = "Audit Trail"
         '
         'MainForm
         '

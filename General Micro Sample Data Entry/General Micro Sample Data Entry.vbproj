@@ -76,6 +76,12 @@
     <Compile Include="authorizedPersonsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="databaseForm.Designer.vb">
+      <DependentUpon>databaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="databaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
   <ItemGroup>
     <EmbeddedResource Include="authorizedPersonsForm.resx">
       <DependentUpon>authorizedPersonsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="databaseForm.resx">
+      <DependentUpon>databaseForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>

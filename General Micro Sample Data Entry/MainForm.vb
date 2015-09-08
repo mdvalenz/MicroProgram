@@ -48,4 +48,7 @@
         sampleSelectionForm.ShowDialog()
     End Sub
 
+    Private Sub DatabaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DatabaseToolStripMenuItem.Click
+        databaseForm.ShowDialog()
+    End Sub
 End Class
