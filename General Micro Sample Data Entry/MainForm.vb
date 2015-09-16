@@ -1,6 +1,7 @@
 ﻿Public Class MainForm
 
     Private Sub importSamplesSDEButton_Click(sender As Object, e As EventArgs) Handles importSamplesSDEButton.Click
+        'Testing with db
 
         'Change form text
         sampleSelectionForm.Text = "Import Sample Data"
